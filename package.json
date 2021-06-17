@@ -1,0 +1,15 @@
+{
+  "name": "fox-cli",
+  "version": "1.0.0",
+  "description": "uniApp 快捷工具",
+  "main": "bin/index.js",
+  "author": "TinsFox",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "fs": "^0.0.1-security",
+    "shelljs": "^0.8.4"
+  }
+}
