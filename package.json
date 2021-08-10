@@ -1,15 +1,19 @@
 {
-  "name": "fox-cli",
+  "name": "u-Helper",
   "version": "1.0.0",
-  "description": "uniApp 快捷工具",
+  "description": "uniApp 帮助工具",
   "main": "bin/index.js",
   "author": "TinsFox",
   "license": "MIT",
   "private": true,
+  "bin": {
+    "u-helper": "./bin/index.js"
+  },
   "dependencies": {
     "chalk": "^4.1.1",
     "commander": "^7.2.0",
     "fs": "^0.0.1-security",
+    "inquirer": "^8.1.1",
     "shelljs": "^0.8.4"
   }
 }

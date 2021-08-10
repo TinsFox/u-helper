@@ -7,32 +7,36 @@ const copyTemplate = require('../lib/copy-template');
 const addRouter = require('../lib/add-router');
 const { error, log, success } = require('../lib/util');
 shell.config.fatal = true;
-
-module.exports = async (name, cmdObj) => {
+/**
+ * 创建页面
+ * @param {*} name 页面名称
+ * @param {*} commandLineParams 参数
+ */
+module.exports = async (name, commandLineParams) => {
   try {
-    let cssType = 'less';
-    let simple = cmdObj.simple;
-    let title = cmdObj.title;
+    console.log(process.cwd());
+    console.log('命令行参数', commandLineParams);
+    let { cssType = 'scss', simple, title } = commandLineParams;
     if (!name && (simple || title)) {
-      error('错误的命令，缺少页面名称');
+      error('Page name is required!');
       process.exit(1);
     }
     if (!name) {
       const answers = await askQuestions();
-      // console.log(answers);
+      console.log(answers);
       name = answers.FILENAME;
       title = answers.TITLE;
       simple = answers.SIMPLE;
+
       if (!simple) {
         const res = await askCss();
         cssType = res.CSS_TYPE;
       }
     }
-    // console.log(process.cwd());
     //检查上下文环境，并返回目标文件目录路径
     let { destDir, destDirRootName, rootDir } = checkContext(
       name,
-      cmdObj,
+      commandLineParams,
       'page',
     );
     //复制模版到目标文件
