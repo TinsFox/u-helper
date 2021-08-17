@@ -13,4 +13,4 @@ if (major < 10) {
   process.exit(1);
 }
 
-require('../script');
+require('../lib/index');
