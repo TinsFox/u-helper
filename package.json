@@ -1,6 +1,6 @@
 {
   "name": "u-helper",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "uniapp 帮助工具",
   "main": "./bin/u-helper.js",
   "author": "TinsFox",
