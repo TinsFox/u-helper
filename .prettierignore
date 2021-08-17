@@ -1,0 +1,7 @@
+# 忽略打包的文件
+src/unpackage
+# 忽略uni-app官方的组件库错误和警告
+src/components/uni-**
+
+node_modules
+README.md
