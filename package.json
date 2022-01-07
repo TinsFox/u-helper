@@ -1,12 +1,12 @@
 {
   "name": "u-helper",
-  "version": "0.0.5",
-  "description": "uniapp 帮助工具",
-  "main": "./bin/u-helper.js",
+  "version": "0.0.7",
+  "description": "uniapp helper",
+  "main": "src/wechatPlugin.js",
   "author": "TinsFox",
   "license": "MIT",
   "bin": {
-    "u-helper": "./bin/u-helper.js"
+    "u-helper": "src/wechatPlugin.js"
   },
   "repository": {
     "type": "git",

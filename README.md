@@ -13,3 +13,14 @@ npm install u-helper -D
 u-helper init -y
 npm run dev:mp-weixin
 ```
+```js
+// vue.config.js
+const wechatPlugin = require("u-helper")
+module.exports = {
+    configureWebpack:{
+        plugins: [
+            new wechatPlugin()
+        ]
+    }
+}
+```
